@@ -1,0 +1,24 @@
+/* Old server icon sizing */
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
+
+/* Get rid of the immensely fucking stupid titlebar */
+@import url('https://chloecinders.github.io/visual-refresh-compact-title-bar/browser.css');
+
+/* Old user area design */
+.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+}
+
+.visual-refresh nav[class*=guilds_] {
+  margin-bottom: unset;
+}
+
+/* Fuck activity status */
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
